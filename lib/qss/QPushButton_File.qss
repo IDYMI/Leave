@@ -1,0 +1,20 @@
+QPushButton
+{
+border:0px;
+height:40px;
+border-radius:15px;
+margin-left:10px;  
+margin-right:10px; 
+font-family:"Microsoft YaHei";
+font-size:20px;
+color:white;
+background-color:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #fbc2eb, stop:1 #a6c1ee);
+}
+QPushButton:hover  
+{
+background-color:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #ffd2f0, stop:1 #b0cbf8);
+}
+QPushButton:pressed  
+{
+background-color:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #e1aad2, stop:1 #92adda);
+}

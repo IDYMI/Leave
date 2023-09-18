@@ -1,0 +1,38 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+<file alias="logo/background.jpg">../logo/background.jpg</file>
+<file alias="logo/bg-pin.png">../logo/bg-pin.png</file>
+<file alias="logo/NYIST.ico">../logo/NYIST.ico</file>
+<file alias="logo/open.png">../logo/open.png</file>
+<file alias="logo/pin.png">../logo/pin.png</file>
+<file alias="logo/一键下载.png">../logo/一键下载.png</file>
+<file alias="logo/下载.png">../logo/下载.png</file>
+<file alias="logo/关闭.png">../logo/关闭.png</file>
+<file alias="logo/删除.png">../logo/删除.png</file>
+<file alias="logo/右对齐.png">../logo/右对齐.png</file>
+<file alias="logo/字体.png">../logo/字体.png</file>
+<file alias="logo/字体颜色.png">../logo/字体颜色.png</file>
+<file alias="logo/居中对齐.png">../logo/居中对齐.png</file>
+<file alias="logo/左对齐.png">../logo/左对齐.png</file>
+<file alias="logo/帮助.png">../logo/帮助.png</file>
+<file alias="logo/搜索.png">../logo/搜索.png</file>
+<file alias="logo/搜索文件.png">../logo/搜索文件.png</file>
+<file alias="logo/搜索文档.png">../logo/搜索文档.png</file>
+<file alias="logo/最大化.png">../logo/最大化.png</file>
+<file alias="logo/最小化.png">../logo/最小化.png</file>
+<file alias="logo/视图.png">../logo/视图.png</file>
+<file alias="logo/还原.png">../logo/还原.png</file>
+<file alias="qss/Menu_PushButton.qss">Menu_PushButton.qss</file>
+<file alias="qss/QComboBox.qss">QComboBox.qss</file>
+<file alias="qss/QLineEdit.qss">QLineEdit.qss</file>
+<file alias="qss/QProgressBar.qss">QProgressBar.qss</file>
+<file alias="qss/QPushButton.qss">QPushButton.qss</file>
+<file alias="qss/QPushButton_File.qss">QPushButton_File.qss</file>
+<file alias="qss/QPushButton_Web.qss">QPushButton_Web.qss</file>
+<file alias="qss/QTableWidget.qss">QTableWidget.qss</file>
+<file alias="qss/QTextBrowser.qss">QTextBrowser.qss</file>
+<file alias="qss/QToolTip.qss">QToolTip.qss</file>
+<file alias="qss/QTreeView.qss">QTreeView.qss</file>
+</qresource>
+</RCC>

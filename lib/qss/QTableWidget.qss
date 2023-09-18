@@ -1,0 +1,48 @@
+QScrollBar:vertical
+{
+width: 6px;
+height: 100px;
+border: none;
+background-color: transparent;
+}
+QScrollBar::handle:vertical
+{
+border: none;
+background: rgba(0,0,0,0.1);
+}
+QScrollBar::handle:vertical:hover
+{
+background: rgb(90, 91, 93);
+}
+QScrollBar:horizontal
+{
+width: 100px;
+height: 6px;
+border: none;
+background-color: transparent;
+}
+QScrollBar::handle:horizontal
+{
+border: none;
+background: rgba(0,0,0,0.1);
+}
+QScrollBar::handle:horizontal:hover
+{
+background: rgb(90, 91, 93);
+}
+QScrollBar::add-line
+{
+border:none;
+}
+QScrollBar::sub-line
+{
+border:none;
+}
+QTableWidget
+{
+border: none;
+}
+QTableView::item:selected
+{
+background-color: rgb(228, 177, 214);
+}

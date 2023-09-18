@@ -1,0 +1,15 @@
+QLineEdit
+{
+font-weight:bold;
+font-size:40px;
+border:0px;
+font-family:"Microsoft YaHei";
+}
+QLineEdit:hover
+{
+border-bottom: 3px solid #66A3FF;
+}
+QLineEdit:focus
+{
+border-bottom: 3px solid #E680BD;
+}

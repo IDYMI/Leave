@@ -1,0 +1,14 @@
+QProgressBar
+{
+border:0px;
+text-align: center;
+background-color: white;
+}
+QProgressBar::chunk
+{
+background-color:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #fbc2eb, stop:1 #a6c1ee);
+}
+QProgressBar:hover
+{
+background-color:qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #ffd2f0, stop:1 #b0cbf8);
+}

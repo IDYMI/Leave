@@ -1,0 +1,12 @@
+QToolTip
+{
+border:10px;
+border-top-left-radius:5px;
+border-top-right-radius:5px;
+border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;
+background:#4F4F4F;
+color:#00BFFF;
+font-size:18px;
+font-family:"微软雅黑";
+}
