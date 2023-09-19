@@ -49,7 +49,7 @@ if __name__ == '__main__':
     UI.show()
     sys.exit(app.exec_())
 
-# Pyinstaller   
+# Pyinstaller
 """
 pyi-makespec -w main.py
 pyinstaller main.spec
@@ -59,8 +59,8 @@ pyinstaller main.spec
 """
 git init
 git add .
-git commit -m '1.3'
+git commit -m '1.1'
 --amend 覆盖提交
-git remote add '1.3' https://github.com/IDYMI/NYIST_Award.git
-git push -u Award
+git remote add '1.1' https://github.com/IDYMI/Leave.git
+git push -u Leave
 """

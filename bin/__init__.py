@@ -18,7 +18,7 @@ BASE_DIR = str(pathlib.PurePath(START_DIR))
 """START_DIR.parents[0] 向上一级"""
 
 # 测试
-BASE_DIR = r'E:\Project\PythonPj\ACM_Leave'
+# BASE_DIR = r'E:\Project\PythonPj\ACM_Leave'
 
 config_path = str(pathlib.PurePath(BASE_DIR, "docs/config.ini"))
 bug_path = str(pathlib.PurePath(BASE_DIR, "docs/bug.log"))
