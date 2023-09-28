@@ -52,10 +52,10 @@ logger.info(f"scale_x : {scale_x}, scale_y : {scale_y}")
 
 # TODO 预设大小
 # 初始主窗口大小
-base_size = QSize(1500 * scale_x, 1000 * scale_y)
+base_size = QSize(int(1500 * scale_x), int(1000 * scale_y))
 ui_width, ui_height = base_size.width(), base_size.height()
 
-tableWidget_size = QSize(1650 * scale, 45 * scale)
+tableWidget_size = QSize(int(1650 * scale), int(45 * scale))
 
 # 透明度
 transparency = 0.9

@@ -63,22 +63,25 @@ class function(object):
         # TODO 优先同导员一张表格，如果同导员人数过少小于 minn 则添加到上个导员，并且最多不超过 maxx
         for i in range(0, len(items), maxx):
             i = index if index >= i else i
+            if i >= len(items):
+                continue
             name, Class, ID, teacher, year, cnt_teacher = items[i]
 
             index = i  # 当前编号
 
             # 无前一页 或者 有前一页且满
-            if (not len(splited_items)) or (len(splited_items) and len(splited_items[-1]) >= maxx):
+            if (not len(splited_items)) or (len(splited_items) and len(splited_items[-1]) >= maxx) or index <= len(items):
                 # 插入一页
                 splited_items.append([])
 
             flag = 1  # 少的忽略直接添加最多添加一次
-            while index + cnt_teacher < len(items):
+            while index + cnt_teacher <= len(items):
                 # 如果小于 minn, 且能添加
                 if cnt_teacher < minn and flag:
                     splited_items[-1] += items[index: index + cnt_teacher]
                     index += cnt_teacher
-                    cnt_teacher = items[index][5]
+                    if index < len(items):
+                        cnt_teacher = items[index][5]
                     if len(splited_items[-1]) + cnt_teacher > maxx:
                         flag = 0
                 # 超过 maxx， 且能添加
@@ -95,27 +98,27 @@ class function(object):
                         splited_items.append(
                             items[index: index + cnt_teacher % maxx])
                         index += cnt_teacher % maxx
-                        cnt_teacher = items[index][5]
-                # 不小于 minn， 不大于 maxx， 当前页能添加完
+                        if index < len(items):
+                            cnt_teacher = items[index][5]
+                # 不大于 maxx， 当前页能添加完
                 elif len(splited_items[-1]) + cnt_teacher <= maxx:
                     splited_items[-1] += items[index: index + cnt_teacher]
                     index += cnt_teacher
-                    cnt_teacher = items[index][5]
+                    if index < len(items):
+                        cnt_teacher = items[index][5]
                     # if len(splited_items[-1]) == maxx:
                     #     splited_items.append([])
-                # 不小于 minn， 不大于 maxx， 当前页不能添加完
+                # 大于 maxx， 当前页不能添加完
                 elif len(splited_items[-1]) + cnt_teacher > maxx:
                     remain = maxx - len(splited_items[-1])
                     splited_items[-1] += items[index: index + remain]
                     splited_items.append(
                         items[index + remain: index + cnt_teacher + 1])
                     index += cnt_teacher
-                    cnt_teacher = items[index][5]
+                    if index < len(items):
+                        cnt_teacher = items[index][5]
                 else:
                     break
-        # 如果有剩余
-        if index != len(items):
-            splited_items[-1] += items[index: index + cnt_teacher]
         # pprint(splited_items)
         return splited_items
 
