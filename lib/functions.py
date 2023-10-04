@@ -70,14 +70,19 @@ class function(object):
             index = i  # 当前编号
 
             # 无前一页 或者 有前一页且满
-            if (not len(splited_items)) or (len(splited_items) and len(splited_items[-1]) >= maxx) or index <= len(items):
+            if (not len(splited_items)) or (len(splited_items) and len(splited_items[-1]) >= maxx):
                 # 插入一页
                 splited_items.append([])
 
             flag = 1  # 少的忽略直接添加最多添加一次
             while index + cnt_teacher <= len(items):
-                # 如果小于 minn, 且能添加
-                if cnt_teacher < minn and flag:
+                # 如果小于 minn, 且能添加, 且下一页没有过少
+                if cnt_teacher < minn and flag and len(items) - index - cnt_teacher > minn:
+
+                    # 防止重复添加
+                    if items[index: index + cnt_teacher] and items[index: index + cnt_teacher][0] in splited_items[-1]:
+                        break
+
                     splited_items[-1] += items[index: index + cnt_teacher]
                     index += cnt_teacher
                     if index < len(items):
@@ -102,6 +107,11 @@ class function(object):
                             cnt_teacher = items[index][5]
                 # 不大于 maxx， 当前页能添加完
                 elif len(splited_items[-1]) + cnt_teacher <= maxx:
+
+                    # 防止重复添加
+                    if items[index: index + cnt_teacher] and items[index: index + cnt_teacher][0] in splited_items[-1]:
+                        break
+
                     splited_items[-1] += items[index: index + cnt_teacher]
                     index += cnt_teacher
                     if index < len(items):
@@ -111,7 +121,17 @@ class function(object):
                 # 大于 maxx， 当前页不能添加完
                 elif len(splited_items[-1]) + cnt_teacher > maxx:
                     remain = maxx - len(splited_items[-1])
+
+                    # 防止重复添加
+                    if items[index: index + remain] and items[index: index + remain][0] in splited_items[-1]:
+                        break
+
                     splited_items[-1] += items[index: index + remain]
+
+                    # 防止重复添加
+                    if items[index + remain: index + cnt_teacher + 1] and items[index + remain: index + cnt_teacher + 1][0] in splited_items[-1]:
+                        break
+
                     splited_items.append(
                         items[index + remain: index + cnt_teacher + 1])
                     index += cnt_teacher
@@ -163,7 +183,8 @@ class function(object):
 
                     # 插入标题
                     title = doc.add_heading()
-                    add_text(title, title_text, 26, Bold=True, alignment='CENTER')
+                    add_text(title, title_text, 26,
+                             Bold=True, alignment='CENTER')
 
                     # 插入原因
                     reason = doc.add_paragraph()
@@ -183,7 +204,8 @@ class function(object):
                     # 插入日期
                     EndDate = doc.add_paragraph()
                     new_end_date = replace_date_in_docx(end_date, Time)
-                    add_text(EndDate, new_end_date, normal_size, alignment='RIGHT')
+                    add_text(EndDate, new_end_date,
+                             normal_size, alignment='RIGHT')
 
                     # 插入工作室名称
                     EndText = doc.add_paragraph()
@@ -192,7 +214,7 @@ class function(object):
                     if idx2 != len(Times) - 1:
                         # 添加分页符
                         doc.add_page_break()
-                if idx != len(data_split) - 1  :
+                if idx != len(data_split) - 1:
                     # 添加分页符
                     doc.add_page_break()
             if idx3 != len(Class) - 1:
@@ -215,7 +237,8 @@ class function(object):
         race_text = self.ui.ReasonBox.line_edit.text()  # 请假理由
         Pause = self.ui.PauseLineEdit.line_edit.text()  # 一次时长
         T = self.ui.TimesLineEdit.line_edit.text()  # 连续几次
-        C = self.ui.Class_Combox.qLineEdit.text().split(',') if self.ui.Class_Combox.qLineEdit.text() else [] # 添加的班级
+        C = self.ui.Class_Combox.qLineEdit.text().split(
+            ',') if self.ui.Class_Combox.qLineEdit.text() else []  # 添加的班级
 
         if race_text != self.ReasonList[0] or Pause != self.PauseList[0] or T != self.TimesList[0] or C != self.ClassList:
             # 如果发生改变, 调换顺序

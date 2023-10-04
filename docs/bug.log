@@ -1,0 +1,11 @@
+2023-09-28 20:32:22.282 | INFO     | bin:<module>:99 - BASE_DIR : E:\Project\PythonPj\ACM_Leave
+2023-09-28 20:32:22.283 | INFO     | bin:create_path:90 - docs_path : E:\Project\PythonPj\ACM_Leave\docs\docx Create Success
+2023-09-28 20:32:23.051 | INFO     | __main__:<module>:12 - LogoQss Link Success : <module 'lib.qss.Logo_Qss_rc' from 'e:\\Project\\PythonPj\\ACM_Leave\\lib\\qss\\Logo_Qss_rc.py'>
+2023-09-28 20:33:54.096 | INFO     | bin:<module>:99 - BASE_DIR : E:\Project\PythonPj\ACM_Leave
+2023-09-28 20:33:54.495 | INFO     | __main__:<module>:12 - LogoQss Link Success : <module 'lib.qss.Logo_Qss_rc' from 'e:\\Project\\PythonPj\\ACM_Leave\\lib\\qss\\Logo_Qss_rc.py'>
+2023-09-28 20:49:13.722 | INFO     | bin:<module>:99 - BASE_DIR : E:\Project\PythonPj\ACM_Leave
+2023-09-28 20:49:14.148 | INFO     | __main__:<module>:12 - LogoQss Link Success : <module 'lib.qss.Logo_Qss_rc' from 'e:\\Project\\PythonPj\\ACM_Leave\\lib\\qss\\Logo_Qss_rc.py'>
+2023-09-28 20:50:07.075 | INFO     | bin:<module>:99 - BASE_DIR : E:\Project\PythonPj\ACM_Leave
+2023-09-28 20:50:07.492 | INFO     | __main__:<module>:12 - LogoQss Link Success : <module 'lib.qss.Logo_Qss_rc' from 'e:\\Project\\PythonPj\\ACM_Leave\\lib\\qss\\Logo_Qss_rc.py'>
+2023-10-04 17:15:15.185 | INFO     | bin:<module>:99 - BASE_DIR : E:\Project\PythonPj\ACM_Leave
+2023-10-04 17:15:15.885 | INFO     | __main__:<module>:12 - LogoQss Link Success : <module 'lib.qss.Logo_Qss_rc' from 'e:\\Project\\PythonPj\\ACM_Leave\\lib\\qss\\Logo_Qss_rc.py'>
