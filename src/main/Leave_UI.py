@@ -27,7 +27,7 @@ class Ui_MainWindow(object):
         self.Sizes()
 
         # 屏幕正中间出现窗口
-        base_pos = QRect((self.user_screen_width - self.ui_width) / 2, (self.user_screen_height - self.ui_height) / 2,
+        base_pos = QRect((self.user_screen_width - self.ui_width) // 2, (self.user_screen_height - self.ui_height) // 2,
                          self.ui_width, self.ui_height)
         MainWindow.setGeometry(base_pos)
         # 设置窗口图标
